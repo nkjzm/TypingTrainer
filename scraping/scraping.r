@@ -1,48 +1,40 @@
 library("XML")
 
-for(j in 1:999){
+for(j in 1:100){
 
-url <- paste("http://ejje.weblio.jp/sentence/content/%E3%81%82/",j,sep="")
+  url <- paste("http://ejje.weblio.jp/sentence/content/%E3%81%82/",j,sep="")
 
-ranking <- htmlParse(url)
-#ranking <- htmlParse("/Users/Kohki/Desktop/App StoreのiPhoneのすべてのカテゴリのトップセールスアプリランキング400 - Top App Ranking 400.html")
-ranking_data <- data.frame()
+  html <- htmlParse(url)
+  data <- data.frame()
 
-len <- length(getNodeSet(ranking, "//p[@class='qotCJE']"))
-print(len)
+  #英文が含まれるclass要素を取得
+  array_div <- getNodeSet(html, "//p[@class='qotCJE']")
+  len <- length(array_div)
 
-array_div	<- getNodeSet(ranking, "//p[@class='qotCJE']")
+  for(i in 2:len){
 
-print("--------ここからループ")
+    #正規表現で抽出・整形
+    sentense <- xmlValue(array_div[[i]])
+    sentense <- gsub("\n", "", sentense)
+    sentense <- gsub("\"", "", sentense)
+    sentense <- gsub("(<!--.*?$)", "", sentense)
+    sentense <- gsub("(-.*?$)", "", sentense)
+    sentense <- gsub("( ^[a-zA-Z])", "", sentense)
+    sentense <- gsub("( $)", "", sentense)
+    sentense <- gsub(" ", "", sentense)
+    sentense <- gsub("'", "", sentense)
+    sentense <- gsub("`", "", sentense)
+    sentense <- gsub("([^\x01-\x7E])", "", sentense)
 
-for(i in 2:len){
-
-  #title <- xmlValue(array_title[[i]])
-  #url <- xmlGetAttr(array_div[[i]],"href")
-  url <- xmlValue(array_div[[i]])
-  url <- gsub("\n", "", url)
-  url <- gsub("\"", "", url)
-  url <- gsub("(<!--.*?$)", "", url)
-  url <- gsub("(-.*?$)", "", url)
-  url <- gsub("( ^[a-zA-Z])", "", url)
-  url <- gsub("( $)", "", url)
-  url <- gsub(" ", "", url)
-  url <- gsub("'", "", url)
-  url <- gsub("`", "", url)
-  url <- gsub("([^\x01-\x7E])", "", url)
-
-
-  if(url != ""){
-
-  print(url)
-
-  entry.frame <- (data.frame(url=url))
-  ranking_data <- rbind(ranking_data, entry.frame)
-
-}
-}
-write.table(ranking_data, "data.txt", quote=F,col.names=F, row.names=F, append=T, sep="")
-
+    #英文をデータに追加
+    if(sentense != ""){
+      print(sentense)
+      entry.frame <- (data.frame(sentense=sentense))
+      data <- rbind(data, entry.frame)
+    }
+  }
+  #データをファイルに追加書き込み
+  write.table(data, "data.txt", quote=F,col.names=F, row.names=F, append=T, sep="")
 
 }
 

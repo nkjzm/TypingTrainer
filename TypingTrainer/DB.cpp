@@ -25,14 +25,13 @@ void DB::Load(){
     {
         list.push_back(str);
     }
-    
-    cout << list.size() << endl;
-    
+
     //重複を削除
     std::sort(list.begin(), list.end());
     list.erase(std::unique(list.begin(), list.end()), list.end());
     
-    cout << list.size() << endl;
+    cout << "読み込み完了" << endl;
+    cout << "データ数:" << list.size() << endl;
 }
 
 vector<string> DB::getRandom(int count)

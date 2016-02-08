@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		522315BF1C68DCC3000111A9 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 522315BD1C68DCC3000111A9 /* Application.cpp */; };
 		52EE36821C67D59E00DA2793 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52EE36811C67D59E00DA2793 /* main.cpp */; };
 		52EE368A1C67FE3B00DA2793 /* DPMatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52EE36881C67FE3B00DA2793 /* DPMatcher.cpp */; };
 		52EE368D1C680D2500DA2793 /* DB.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52EE368B1C680D2500DA2793 /* DB.cpp */; };
@@ -25,6 +26,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		522315BD1C68DCC3000111A9 /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
+		522315BE1C68DCC3000111A9 /* Application.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Application.hpp; sourceTree = "<group>"; };
 		52EE367E1C67D59E00DA2793 /* TypingTrainer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TypingTrainer; sourceTree = BUILT_PRODUCTS_DIR; };
 		52EE36811C67D59E00DA2793 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		52EE36881C67FE3B00DA2793 /* DPMatcher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DPMatcher.cpp; sourceTree = "<group>"; };
@@ -68,6 +71,8 @@
 				52EE368B1C680D2500DA2793 /* DB.cpp */,
 				52EE368C1C680D2500DA2793 /* DB.hpp */,
 				52EE36891C67FE3B00DA2793 /* DPMatcher.hpp */,
+				522315BD1C68DCC3000111A9 /* Application.cpp */,
+				522315BE1C68DCC3000111A9 /* Application.hpp */,
 			);
 			path = TypingTrainer;
 			sourceTree = "<group>";
@@ -128,6 +133,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				522315BF1C68DCC3000111A9 /* Application.cpp in Sources */,
 				52EE368D1C680D2500DA2793 /* DB.cpp in Sources */,
 				52EE368A1C67FE3B00DA2793 /* DPMatcher.cpp in Sources */,
 				52EE36821C67D59E00DA2793 /* main.cpp in Sources */,
