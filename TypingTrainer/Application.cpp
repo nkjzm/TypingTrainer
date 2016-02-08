@@ -39,9 +39,6 @@ void Application::train()
     int errcount = 0;
     int inputcount = 0;
     
-    std::chrono::system_clock::time_point  start, end; // 型は auto で可
-    start = std::chrono::system_clock::now(); // 計測開始時間
-    
     setbuf(stdout, NULL);
     
     for(int i=3;i>0;--i){
@@ -49,6 +46,9 @@ void Application::train()
         sleep( 1 );
     }
     cout << "スタート!" << endl;
+    
+    std::chrono::system_clock::time_point  start, end; // 型は auto で可
+    start = std::chrono::system_clock::now(); // 計測開始時間
     
     while(true){
         cout << "----------" << endl;
