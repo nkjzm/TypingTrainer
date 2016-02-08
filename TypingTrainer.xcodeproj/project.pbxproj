@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		52EE36821C67D59E00DA2793 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52EE36811C67D59E00DA2793 /* main.cpp */; };
+		52EE368A1C67FE3B00DA2793 /* DPMatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52EE36881C67FE3B00DA2793 /* DPMatcher.cpp */; };
+		52EE368D1C680D2500DA2793 /* DB.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52EE368B1C680D2500DA2793 /* DB.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		52EE367E1C67D59E00DA2793 /* TypingTrainer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TypingTrainer; sourceTree = BUILT_PRODUCTS_DIR; };
 		52EE36811C67D59E00DA2793 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		52EE36881C67FE3B00DA2793 /* DPMatcher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DPMatcher.cpp; sourceTree = "<group>"; };
+		52EE36891C67FE3B00DA2793 /* DPMatcher.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DPMatcher.hpp; sourceTree = "<group>"; };
+		52EE368B1C680D2500DA2793 /* DB.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DB.cpp; sourceTree = "<group>"; };
+		52EE368C1C680D2500DA2793 /* DB.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DB.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				52EE36811C67D59E00DA2793 /* main.cpp */,
+				52EE36881C67FE3B00DA2793 /* DPMatcher.cpp */,
+				52EE368B1C680D2500DA2793 /* DB.cpp */,
+				52EE368C1C680D2500DA2793 /* DB.hpp */,
+				52EE36891C67FE3B00DA2793 /* DPMatcher.hpp */,
 			);
 			path = TypingTrainer;
 			sourceTree = "<group>";
@@ -118,6 +128,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52EE368D1C680D2500DA2793 /* DB.cpp in Sources */,
+				52EE368A1C67FE3B00DA2793 /* DPMatcher.cpp in Sources */,
 				52EE36821C67D59E00DA2793 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,6 +249,7 @@
 				52EE36871C67D59E00DA2793 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
